@@ -1,11 +1,11 @@
-id: migrate_tem_from_json
+id: migratejson
 label: import terms from json
 source:
   plugin: url
   data_fetcher_plugin: file
   data_parser_plugin: json
   urls:
-    - modules/custom/mymigrations/files/migratejson.json
+    - modules/custom/migration_feature/files/migratejson.json
   item_selector: migration
   fields:
     -
@@ -29,7 +29,7 @@ process:
   parent: parent  
   vid:
     plugin: default_value
-    default_value: taxo_from_json
+    default_value: migration_demo_showcase
 destination:
   plugin: 'entity:taxonomy_term'
     
